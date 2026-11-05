@@ -2,15 +2,13 @@
 
 **Peer-to-peer marketplace for creative studios.** Photographers, filmmakers, podcasters, musicians and artists discover, filter and book studio spaces by the hour, while hosts list rooms and approve every request.
 
-**Live site:** https://YOUR-CLIENT-URL.vercel.app
-**API:** https://YOUR-SERVER-URL.vercel.app
-**Server repo:** https://github.com/LutfunNaharNisha/studiospace-server
+[![Live Demo](https://img.shields.io/badge/Live_Demo-StudioSpace-D4FF00?style=for-the-badge&logo=vercel&logoColor=black)](https://studiospace-client-drab.vercel.app/)
 
 ## Examiner test credentials
 
-| Role | Email | Password |
-| --- | --- | --- |
-| Host + Guest (has 10 seeded studios) | `examiner@studiospace.dev` | `Studio123` |
+| Role                                         | Email                   | Password    |
+| -------------------------------------------- | ----------------------- | ----------- |
+| Host + Guest (has 10 seeded studios)         | `nisha@studiospace.dev` | `Studio123` |
 | Second guest (register once to test booking) | `guest@studiospace.dev` | `Studio123` |
 
 Tip: log in as the examiner (host), then book a studio from a second account and confirm it from **Dashboard** to see the double-booking protection.
@@ -30,12 +28,12 @@ Tip: log in as the examiner (host), then book a studio from a second account and
 
 ## Tech stack
 
-| Layer | Technology |
-| --- | --- |
-| Frontend | Next.js 14 (App Router), Tailwind CSS, DaisyUI, Swiper, react-hot-toast, react-icons, jsPDF |
-| Auth | BetterAuth (MongoDB adapter, email + password, Google) and JWT in an HTTPOnly cookie |
-| Backend | Express.js, MongoDB (native driver), JSON Web Tokens |
-| Hosting | Vercel (client and server) |
+| Layer    | Technology                                                                               |
+| -------- | ---------------------------------------------------------------------------------------- |
+| Frontend | Next.js (App Router), Tailwind CSS, DaisyUI, Swiper, react-hot-toast, react-icons, jsPDF |
+| Auth     | BetterAuth (MongoDB adapter, email + password, Google) and JWT in an HTTPOnly cookie     |
+| Backend  | Express.js, MongoDB (native driver), JSON Web Tokens                                     |
+| Hosting  | Vercel (client and server)                                                               |
 
 ## Run locally
 
@@ -46,10 +44,32 @@ Tip: log in as the examiner (host), then book a studio from a second account and
 5. Optional demo data: register `examiner@studiospace.dev` in the app, then run `npm run seed` in the server folder.
 6. Start the client: `npm run dev` (port 3000) and open http://localhost:3000.
 
-## Project structure
+## 📁 Project Structure
 
-```
-app/            routes (home, studios, auth, dashboard, bookings, listings...)
-components/     Navbar, Footer, StudioCard, BookingModal, StudioForm, modals...
-lib/            api helper, BetterAuth config, constants, PDF invoice
+```text
+StudioSpace/
+├── 📂 app/                  # Application routes and pages
+│   ├── home/                # Landing page
+│   ├── studios/             # Studio discovery and details
+│   ├── auth/                # Authentication pages
+│   ├── dashboard/           # User dashboard
+│   ├── bookings/             # Booking management
+│   ├── listings/            # Studio listings
+│   └── ...
+│
+├── 📂 components/            # Reusable UI components
+│   ├── Navbar                # Navigation bar
+│   ├── Footer                # Site footer
+│   ├── StudioCard            # Studio preview card
+│   ├── BookingModal          # Booking interface
+│   ├── StudioForm            # Studio creation and editing
+│   ├── Modals/               # Reusable modal components
+│   └── ...
+│
+└── 📂 lib/                   # Utilities and configurations
+│   ├── API Helper            # API request utilities
+│   ├── Better Auth Config    # Authentication setup
+│   ├── Constants             # Shared application constants
+│   ├── PDF Invoice           # Invoice generation utilities
+│   └── ...
 ```
