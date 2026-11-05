@@ -3,6 +3,7 @@
 **Peer-to-peer marketplace for creative studios.** Photographers, filmmakers, podcasters, musicians and artists discover, filter and book studio spaces by the hour, while hosts list rooms and approve every request.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-StudioSpace-D4FF00?style=for-the-badge&logo=vercel&logoColor=black)](https://studiospace-client-drab.vercel.app/)
+[![Live API](https://img.shields.io/badge/Live_API-StudioSpace-D4FF00?style=for-the-badge&logo=vercel&logoColor=black)](https://studiospace-server-ivory.vercel.app/)
 
 ## Examiner test credentials
 
