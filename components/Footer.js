@@ -15,11 +15,7 @@ import {
 const SOCIAL = [
 	{ label: "X", href: "https://x.com", icon: FaXTwitter },
 	{ label: "Instagram", href: "https://instagram.com", icon: FaInstagram },
-	{
-		label: "LinkedIn",
-		href: "https://linkedin.com/in/lutfunnaharnishaa",
-		icon: FaLinkedinIn,
-	},
+	{ label: "LinkedIn", href: "https://linkedin.com", icon: FaLinkedinIn },
 	{ label: "YouTube", href: "https://youtube.com", icon: FaYoutube },
 	{
 		label: "GitHub",
