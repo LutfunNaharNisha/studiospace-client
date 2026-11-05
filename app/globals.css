@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: "Bricolage Grotesque Variable", system-ui, sans-serif;
+		letter-spacing: -0.02em;
+	}
+	:focus-visible {
+		outline: 2px solid oklch(var(--p));
+		outline-offset: 2px;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+		* {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+}
+
+@layer components {
+	.container-x {
+		@apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+	}
+	.section {
+		@apply py-16 sm:py-20;
+	}
+	/* One heading style, used by every section on every page */
+	.section-title {
+		@apply text-3xl font-bold sm:text-4xl;
+	}
+	.section-sub {
+		@apply mt-3 max-w-2xl text-base text-base-content/70;
+	}
+	.card-lift {
+		@apply transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+	}
+	.field-label {
+		@apply mb-1.5 block text-sm font-medium;
+	}
+	/* Gaffer-tape style price tag */
+	.tape {
+		@apply inline-flex items-baseline gap-1 rounded-md bg-accent px-2.5 py-1 font-display text-accent-content;
+		transform: rotate(-1.5deg);
+	}
+}
+
+.spotlight {
+	background: radial-gradient(
+		60% 90% at 88% 0%,
+		rgba(255, 210, 63, 0.22),
+		transparent 62%
+	);
+}
+
+.swiper-pagination-bullet {
+	background: #fff !important;
+	opacity: 0.55;
+	transition: width 0.25s;
+}
+.swiper-pagination-bullet-active {
+	background: #ffd23f !important;
+	opacity: 1;
+	width: 26px !important;
+	border-radius: 6px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	color: #fff !important;
+	transform: scale(0.6);
+}
